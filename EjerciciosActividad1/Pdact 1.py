@@ -1,18 +1,16 @@
-''' Si la edad es mayor o igual a 18 y menor o igual a 22
- y los puntos de evaluación obtenidos fueron superiores o iguales a 80,
-  pasa para el programa de LIGA PROFESIONAL DE FUTBOL
-Si la edad es mayor o igual a 18 y menor o igual a 22
-y los puntos de evaluación obtenidos fueron menores a 80,
-pasa para el programa de LIGA SEMIPROFESIONAL
-'''
+producto = (input('ingrese el producto: '))
+cantidad = int(input('ingrese la cantidad: '))
+valunitario = int(input('ingrese el valor unitario: '))
+ciudadvent = (input('ingrese la ciudad de venta: '))
 
+total = 0
+total = cantidad*valunitario
 
-edad = int(input("Por favor ingrese la edad: "))
-punt_evaluacion = int(input("Por favor ingrese en un rango de 0 a 100 sus puntos de evaluación: "))
-if edad>=18 and edad<=22 and punt_evaluacion >= 80:
-    print("Usted pasa para el programa de  LIGA PROFESIONAL DE FUTBOL")
-else :
-    if edad>=18 and edad<=22 and punt_evaluacion < 80:
-        print("Usted pasa para el programa de LIGA SEMIPROFESIONAL")
-    else :
-        print("Usted no aplica para el programa")
+print(total)
+
+if ciudadvent=='medellin' or ciudadvent=='cali':
+    total=total*0.95
+    print('el valor con el descuento es de: ',total)
+else:
+    print('no se aplica el descuento')
+    print('su total a pagar es: ',total)
